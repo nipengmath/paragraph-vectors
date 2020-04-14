@@ -5,6 +5,11 @@ import fire
 import torch
 from torch.optim import Adam
 
+
+import sys, os
+DIRNAME = os.path.realpath(os.path.dirname(__file__))
+sys.path.append(os.path.join(DIRNAME, "../"))
+
 from paragraphvec.data import load_dataset, NCEData
 from paragraphvec.loss import NegativeSampling
 from paragraphvec.models import DM, DBOW
